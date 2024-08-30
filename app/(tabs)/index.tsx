@@ -32,7 +32,7 @@ export default function HomeScreen() {
             className="flex items-center justify-center bg-black rounded-full w-52 h-52"
           >
             <Text className="text-zinc-200 text-4xl">
-              { temperature } ºC
+              { temperature ? temperature : "--" } ºC
             </Text>
             <Text className="text-zinc-200 text-lg mt-3">Temperatura ambiente</Text>
           </View>
