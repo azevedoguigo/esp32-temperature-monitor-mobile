@@ -1,3 +1,4 @@
+import { LinearGradient } from "expo-linear-gradient";
 import { useEffect, useState } from "react";
 import { Text, View } from "react-native";
 
@@ -25,7 +26,18 @@ export default function HomeScreen() {
 
   return (
     <View className="flex justify-center items-center h-full">
-      <Text>{ temperature }</Text>
+      <LinearGradient colors={["#2563EB", "#1E40AF"]} className="rounded-full p-4">
+        <Text>
+          <View 
+            className="flex items-center justify-center bg-black rounded-full w-52 h-52"
+          >
+            <Text className="text-zinc-200 text-4xl">
+              { temperature } ºC
+            </Text>
+            <Text className="text-zinc-200 text-lg mt-3">Temperatura ambiente</Text>
+          </View>
+        </Text>
+      </LinearGradient>
     </View>
   );
 }
